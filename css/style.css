@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #24634e;
+}
+h1{
+    color: black;
+    font-size: 42px;
+    text-align: center;
+    text-decoration: underline;
+}
+.bordes{
+    border-radius: 10px;
+}
+.nav{
+    padding: 10px;
+}
+.lista{
+    list-style-type: none;
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.link{
+    margin: 30px;
+    padding: 10px;
+    border: 2px black;
+    background-color: bisque;
+    text-decoration: none;
+    color: black
+    
+}
+.link:hover{
+    color: #24634e;
+    font-weight: bold;
+}
+.volver{
+    margin-top: 50px;
+    padding: 20px;
+    text-decoration: none;
+    color: bisque;
+}
+.volver:hover{
+    color: black;
+    font-weight: bold;
+}
+.container{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.cursos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 2px 2px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Curso1 Curso2 Curso3";
+}
+
+.Curso1 {
+    grid-area: Curso1;
+    background-color: aliceblue;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+
+.Curso2 {
+    grid-area: Curso2; 
+    background-color: aliceblue;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+
+.Curso3 {
+    grid-area: Curso3;
+    background-color: aliceblue;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+.p-curso{
+    padding: 10px;
+    line-height: 1.5;
+}
+
+
+/*media querie para mobile*/
+@media screen and (max-width:600px){
+    .cursos{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "Curso1"
+        "Curso2"
+        "Curso3";
+    }
+    .link{
+        flex-direction: column;
+        align-self: center;
+        width: 100px;
+    }
+}
